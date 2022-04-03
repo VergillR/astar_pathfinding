@@ -1,7 +1,7 @@
 name: astar_pathfinding
 description: Astar pathfinding with the options to include costs and allowing/disallowing diagonal movement.
 version: 0.0.1
-homepage:
+homepage: https://github.com/VergillR/astar_pathfinding
 
 environment:
   sdk: ">=2.16.1 <3.0.0"
