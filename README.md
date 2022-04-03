@@ -8,7 +8,7 @@ Pathfinding is used to find a path from one point to another in a grid. This is 
 
 ## Usage
 
-First create a grid that holds all the nodes. Assign a *int* value to each node. This is the **cost** for traversing that node. The pathfinding algorithm will try to keep the total cost as low as possible. Negative values are allowed which may represent *boosters* or *speed ups*.
+First create a grid that holds all the nodes. Assign an *int* value to each node. This is the **cost** for traversing that node. The pathfinding algorithm will try to keep the total cost as low as possible. Negative values are allowed which may represent *boosters* or *speed ups*.
 A value of **999** means the node is impassable (i.e. it can never be traversed).
 
 ```dart
@@ -78,6 +78,7 @@ print(astar.getMatrix()); // prints matrix2
 
 // update the matrix for one node:
 // use AstarNode to describe the node; weight is cost
+// for example update the node at (0, 1) with cost 5:
 astar.updateMatrixPoints([AstarNode(x: 0, y: 1, weight: 5)]);
 
 // update the matrix for multiple nodes:
