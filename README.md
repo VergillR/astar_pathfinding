@@ -54,10 +54,10 @@ This package extends the original package with some extra functions.
 ```dart
 // Get total cost of the last calculated path.
 final totalcost = astar.getTotalCost();
-print(totalcost); // 104
+print(totalcost); // sum of weights: 5
 // Get total steps of the last calculated path.
 final totalsteps = astar.getTotalSteps();
-print(totalsteps); // 13
+print(totalsteps); // steps needed: 13
 ```
 
 The grid can change at any time. You can either update the entire matrix or with a List of certain nodes (*AstarNode*) in the matrix.
