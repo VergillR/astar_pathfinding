@@ -29,7 +29,7 @@ void main() {
       [3, 0]
     ]);
     final c = astar.getTotalCost();
-    expect(c, 3);
+    expect(c, 0);
     final s = astar.getTotalSteps();
     expect(s, 3);
   });
@@ -111,7 +111,7 @@ void main() {
       ],
     );
     final c = astar.getTotalCost();
-    expect(c, 105);
+    expect(c, 0);
     final s = astar.getTotalSteps();
     expect(s, 14);
   });
@@ -155,7 +155,7 @@ void main() {
       ],
     );
     final c = astar.getTotalCost();
-    expect(c, 104);
+    expect(c, 5);
     final s = astar.getTotalSteps();
     expect(s, 13);
   });
@@ -214,7 +214,7 @@ void main() {
       [10, 9]
     ]);
     final c = astar.getTotalCost();
-    expect(c, 304);
+    expect(c, 0);
     final s = astar.getTotalSteps();
     expect(s, 33);
   });

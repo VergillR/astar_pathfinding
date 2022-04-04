@@ -158,7 +158,7 @@ class AstarPathfinding {
     _totalnodes = 0;
 
     while (tmp != null) {
-      _totalcost += tmp.heuristic;
+      _totalcost += tmp.weight;
       _totalnodes++;
       path.add([tmp.x, tmp.y]);
       tmp = tmp.parent;
