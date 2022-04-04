@@ -269,4 +269,42 @@ class AstarPathfinding {
 
     return _run(startPoint: sp, endPoint: ep, allowDiagonals: allowDiagonals);
   }
+
+  /// Same as run(), but now returns a path only if the given constraints were not violated. Otherwise, it returns null.
+  ///
+  /// The available constraints are maxCostAllowed (required), baseCostForEachStep (default 1) and maxStepsAllowed (default 100).
+  List<List<int>>? runWithConstraints({
+    required int maxCostAllowed,
+    required bool allowDiagonals,
+    Point<int>? startPoint,
+    Point<int>? endPoint,
+    int? startX,
+    int? startY,
+    int? endX,
+    int? endY,
+    List<int>? startList,
+    List<int>? endList,
+    int baseCostForEachStep = 1,
+    int maxStepsAllowed = 100,
+  }) {
+    List<List<int>>? path = run(
+      allowDiagonals: allowDiagonals,
+      startPoint: startPoint,
+      startList: startList,
+      startX: startX,
+      startY: startY,
+      endPoint: endPoint,
+      endList: endList,
+      endX: endX,
+      endY: endY,
+    );
+    if (path == null ||
+        getTotalCost() + (getTotalSteps() * baseCostForEachStep) >
+            maxCostAllowed ||
+        getTotalSteps() > maxStepsAllowed) {
+      return null;
+    } else {
+      return path;
+    }
+  }
 }
