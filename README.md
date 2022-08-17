@@ -13,7 +13,7 @@ A value of **999** means the node is impassable (i.e. it can never be traversed)
 
 ```dart
 // This is a 11x10 grid. The index starts at 0.
-// The node at (5,4) has 0 cost. The node at (6,4) has 5 cost.
+// The node at (5,2) has 0 cost. The node at (5,3) has 5 cost.
 final matrix = [
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
