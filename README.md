@@ -36,13 +36,13 @@ By setting allowDiagonals to *true* or *false*, you can allow or deny diagonal m
 
 ```dart
 // with Point
-final path = run(startPoint: Point(0, 0), endPoint: Point(10, 9), allowDiagonals: true);
+final path = astar.run(startPoint: Point(0, 0), endPoint: Point(10, 9), allowDiagonals: true);
 // with List
-final path = run(startList: [0, 0], endList: [10, 9], allowDiagonals: true);
+final path = astar.run(startList: [0, 0], endList: [10, 9], allowDiagonals: true);
 // with int
-final path = run(startX: 0, startY: 0, endX: 10, endY: 9, allowDiagonals: true);
+final path = astar.run(startX: 0, startY: 0, endX: 10, endY: 9, allowDiagonals: true);
 // mixed
-final path = run(startPoint: Point(0, 0), endX: 10, endY: 9, allowDiagonals: true);
+final path = astar.run(startPoint: Point(0, 0), endX: 10, endY: 9, allowDiagonals: true);
 
 // check path
 print(path);
@@ -94,7 +94,7 @@ astar.updateMatrixPoints(nodes);
 print(astar.getMatrix()); // prints the updated matrix
 
 // and continue to work with the updated matrix
-final path2 = run(startPoint: Point(0, 0), endPoint: Point(4,1), allowDiagonals: false);
+final path2 = astar.run(startPoint: Point(0, 0), endPoint: Point(4,1), allowDiagonals: false);
 ```
 
 ## License
